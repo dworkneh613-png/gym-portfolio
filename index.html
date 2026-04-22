@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Special Solution | Engines of Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-orange-600/10 px-8 py-4 flex justify-between items-center">
+        <div class="text-xl font-black tracking-tighter uppercase">Nexus <span class="text-[#FF6B00]">Special</span></div>
+        <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
+            <a href="index.html" class="text-[#FF6B00]">Home</a>
+            <a href="#projects" class="hover:text-[#FF6B00]">Projects</a>
+            <a href="#process" class="hover:text-[#FF6B00]">Process</a>
+            <a href="contact.html" class="hover:text-[#FF6B00]">Contact</a>
+        </div>
+        <a href="contact.html" class="btn-orange px-6 py-2 rounded-full text-[10px] font-bold uppercase">Let's Build</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen relative flex items-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1920" class="w-full h-full object-cover opacity-40">
+            <div class="absolute inset-0 orange-gradient-overlay"></div>
+        </div>
+        
+        <div class="container mx-auto px-8 grid md:grid-cols-2 items-center relative z-10">
+            <div class="reveal">
+                <h1 class="text-6xl md:text-8xl font-black leading-none mb-6">WE BUILD THE <br> <span class="text-[#FF6B00]">ENGINES</span> OF FITNESS.</h1>
+                <p class="text-gray-400 text-lg mb-10 max-w-lg">High-performance digital infrastructure for modern gym chains and wellness leaders.</p>
+                <a href="#projects" class="btn-orange px-10 py-5 rounded-lg font-black uppercase text-xs tracking-widest inline-block">View Prototypes</a>
+            </div>
+            <div class="relative hidden md:block reveal">
+                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=800" class="rounded-2xl shadow-2xl border border-white/10 skew-y-3" alt="Macbook Mockup">
+                <div class="absolute -bottom-10 -left-10 bg-[#FF6B00] p-6 rounded-xl shadow-2xl">
+                    <p class="font-black text-black text-xs uppercase tracking-widest italic">100% Performance Driven</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo Bar -->
+    <div class="bg-[#1A1A1A] py-10 border-y border-orange-600/10 overflow-hidden">
+        <div class="marquee-content">
+            <div class="flex space-x-20 px-10 items-center opacity-30 grayscale invert">
+                <span class="text-2xl font-black">ELITE GYM</span>
+                <span class="text-2xl font-black">ADAMA WELLNESS</span>
+                <span class="text-2xl font-black">POWER-HOUSE</span>
+                <span class="text-2xl font-black">IRON CITY</span>
+                <span class="text-2xl font-black">TITAN FITNESS</span>
+                <span class="text-2xl font-black">BEAST MODE</span>
+            </div>
+            <!-- Duplicated for loop -->
+            <div class="flex space-x-20 px-10 items-center opacity-30 grayscale invert">
+                <span class="text-2xl font-black">ELITE GYM</span>
+                <span class="text-2xl font-black">ADAMA WELLNESS</span>
+                <span class="text-2xl font-black">POWER-HOUSE</span>
+                <span class="text-2xl font-black">IRON CITY</span>
+                <span class="text-2xl font-black">TITAN FITNESS</span>
+                <span class="text-2xl font-black">BEAST MODE</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Unique Skill Cards -->
+    <section class="py-32 container mx-auto px-8">
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="glass-card p-10 rounded-3xl reveal">
+                <img src="https://images.unsplash.com/photo-1557170334-a9632e77c6e4?q=80&w=600" class="w-full h-64 object-cover rounded-2xl mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+                <h3 class="text-2xl font-black mb-4 uppercase text-[#FF6B00]">Membership Architecture</h3>
+                <p class="text-gray-400">Unique backend booking systems integrated with biometric keypad entry and app interfaces.</p>
+            </div>
+            <div class="glass-card p-10 rounded-3xl reveal" style="transition-delay: 0.2s;">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600" class="w-full h-64 object-cover rounded-2xl mb-8 grayscale hover:grayscale-0 transition-all duration-700">
+                <h3 class="text-2xl font-black mb-4 uppercase text-[#FF6B00]">Marketing Funnels</h3>
+                <p class="text-gray-400">We prioritize business growth over simple beauty. Data analytics and sales conversion are our core.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Prototypes Section -->
+    <section id="projects" class="py-32 bg-[#050505]">
+        <div class="container mx-auto px-8">
+            <h2 class="text-5xl font-black uppercase mb-20 text-center">our previous and ongoing <span class="text-[#FF6B00]">companies</span></h2>
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="reveal">
+                    <div class="bg-[#1A1A1A] p-4 rounded-t-xl border-x border-t border-orange-600/20">
+                        <img src="skycity.jpg" class="rounded-lg h-80 w-full object-cover">
+                    </div>
+                    <div class="bg-[#1A1A1A] p-8 rounded-b-xl">
+                        <h4 class="font-black uppercase mb-2">sky city hotel</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Web site and digital marketing</p>
+                    </div>
+                </div>
+                <div class="reveal" style="transition-delay: 0.1s;">
+                    <div class="bg-[#1A1A1A] p-4 rounded-t-xl border-x border-t border-orange-600/20">
+                        <img src="logo.png" class="rounded-lg h-80 w-full object-cover">
+                    </div>
+                    <div class="bg-[#1A1A1A] p-8 rounded-b-xl">
+                        <h4 class="font-black uppercase mb-2">Nano speciality dental and maxillofacial center</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">website and digital marketing</p>
+                    </div>
+                </div>
+                <div class="reveal" style="transition-delay: 0.2s;">
+                    <div class="bg-[#1A1A1A] p-4 rounded-t-xl border-x border-t border-orange-600/20">
+                        <img src="G2 gym.jpg" class="rounded-lg h-80 w-full object-cover">
+                    </div>
+                    <div class="bg-[#1A1A1A] p-8 rounded-b-xl">
+                        <h4 class="font-black uppercase mb-2">G2 Gym</h4>
+                        <p class="text-xs text-gray-500 uppercase tracking-widest">Website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-32 container mx-auto px-8">
+        <h2 class="text-5xl font-black uppercase mb-20 text-[#FF6B00]">The Deployment Path</h2>
+        <div class="space-y-32">
+            <div class="flex items-start gap-10 reveal">
+                <span class="text-8xl font-black text-white/5">01</span>
+                <div>
+                    <h3 class="text-3xl font-black uppercase mb-4 mt-8">UI Visual Logic</h3>
+                    <p class="text-gray-500 max-w-xl">Deep psychological design that guides gym members to the 'Join Now' button with zero friction.</p>
+                </div>
+            </div>
+            <div class="flex items-start gap-10 reveal">
+                <span class="text-8xl font-black text-white/5">02</span>
+                <div>
+                    <h3 class="text-3xl font-black uppercase mb-4 mt-8">Firebase Power</h3>
+                    <p class="text-gray-500 max-w-xl">Real-time database management ensuring every member's payment and attendance is synced globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-20 border-t border-orange-600/10 text-center">
+        <p class="text-xs font-bold uppercase tracking-[0.5em] opacity-30">© 2026 Nexus Special Solution | Designed for Performance.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        gsap.registerPlugin(ScrollTrigger);
+
+        document.querySelectorAll('.reveal').forEach((el) => {
+            gsap.to(el, {
+                scrollTrigger: el,
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power4.out"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Nexus Special Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="pt-32">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-orange-600/10 px-8 py-4 flex justify-between items-center">
+        <div class="text-xl font-black tracking-tighter uppercase">Nexus <span class="text-[#FF6B00]">Special</span></div>
+        <div class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest">
+            <a href="index.html" class="text-[#FF6B00]">Home</a>
+            <a href="#projects" class="hover:text-[#FF6B00]">Projects</a>
+            <a href="#process" class="hover:text-[#FF6B00]">Process</a>
+            <a href="contact.html" class="hover:text-[#FF6B00]">Contact</a>
+        </div>
+        <a href="contact.html" class="btn-orange px-6 py-2 rounded-full text-[10px] font-bold uppercase">Let's Build</a>
+    </nav>
+
+    <!-- (Nav remains the same as index.html) -->
+
+    <main class="container mx-auto px-8">
+        <h1 class="text-7xl md:text-9xl font-black uppercase tracking-tighter mb-20 leading-none">THE <span class="text-[#FF6B00]">HUB.</span></h1>
+
+        <!-- Social Hub Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-32">
+            <a href="#" class="relative h-64 glass-card rounded-3xl overflow-hidden group">
+                <img src="Call logo.jpg" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform">
+                <div class="relative z-10 p-8 h-full flex flex-col justify-between">
+                    <i data-lucide="phone" class="w-12 h-12 text-[#FF6B00]"></i>
+                    <span class="font-black uppercase text-xs tracking-widest">Call Nexus</span>
+                </div>
+            </a>
+            <a href="#" class="relative h-64 glass-card rounded-3xl overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1611606063065-ee7946f0787a?q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform">
+                <div class="relative z-10 p-8 h-full flex flex-col justify-between">
+                    <i data-lucide="send" class="w-12 h-12 text-[#FF6B00]"></i>
+                    <span class="font-black uppercase text-xs tracking-widest">Telegram</span>
+                </div>
+            </a>
+            <a href="#" class="relative h-64 glass-card rounded-3xl overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1611262588024-d12430b98920?q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform">
+                <div class="relative z-10 p-8 h-full flex flex-col justify-between">
+                    <i data-lucide="instagram" class="w-12 h-12 text-[#FF6B00]"></i>
+                    <span class="font-black uppercase text-xs tracking-widest">Instagram</span>
+                </div>
+            </a>
+            <a href="#" class="relative h-64 glass-card rounded-3xl overflow-hidden group">
+                <img src="https://images.unsplash.com/photo-1557200134-90327ee9fafa?q=80&w=400" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-110 transition-transform">
+                <div class="relative z-10 p-8 h-full flex flex-col justify-between">
+                    <i data-lucide="mail" class="w-12 h-12 text-[#FF6B00]"></i>
+                    <span class="font-black uppercase text-xs tracking-widest">Email</span>
+                </div>
+            </a>
+        </div>
+
+        <!-- Modern Lead Form -->
+        <section class="max-w-4xl mx-auto mb-32 bg-[#1A1A1A] p-12 rounded-[50px] border border-orange-600/10">
+            <h2 class="text-4xl font-black mb-10 uppercase tracking-tight">Deploy a Request</h2>
+            <form id="leadForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" placeholder="Owner Name" class="w-full bg-black/50 border border-white/10 p-5 rounded-2xl outline-none focus:border-[#FF6B00] transition-colors">
+                    <input type="text" placeholder="Gym Location" class="w-full bg-black/50 border border-white/10 p-5 rounded-2xl outline-none focus:border-[#FF6B00] transition-colors">
+                </div>
+                <input type="email" placeholder="Business Email" class="w-full bg-black/50 border border-white/10 p-5 rounded-2xl outline-none focus:border-[#FF6B00] transition-colors">
+                <textarea rows="5" placeholder="Project Overview" class="w-full bg-black/50 border border-white/10 p-5 rounded-2xl outline-none focus:border-[#FF6B00] transition-colors"></textarea>
+                <button type="submit" class="btn-orange w-full py-6 rounded-2xl font-black uppercase tracking-widest text-xs">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script>
+        lucide.createIcons();
+
+        document.getElementById('leadForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            // GSAP Success Animation
+            const successOverlay = document.createElement('div');
+            successOverlay.className = "fixed inset-0 bg-[#FF6B00] z-[100] flex items-center justify-center text-black p-10 text-center";
+            successOverlay.innerHTML = `<div><h1 class='text-8xl font-black uppercase mb-4'>SENT.</h1><p class='font-bold uppercase tracking-widest'>Nexus has received your request.</p></div>`;
+            document.body.appendChild(successOverlay);
+            
+            gsap.from(successOverlay, { opacity: 0, scale: 1.1, duration: 0.5, ease: "power4.out" });
+            
+            setTimeout(() => {
+                location.reload();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

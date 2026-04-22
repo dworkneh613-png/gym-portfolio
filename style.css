@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap');
+
+:root {
+    --matte-black: #0A0A0A;
+    --charcoal: #1A1A1A;
+    --electric-orange: #FF6B00;
+}
+
+body {
+    background-color: var(--matte-black);
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.orange-gradient-overlay {
+    background: linear-gradient(45deg, rgba(255, 107, 0, 0.2) 0%, rgba(10, 10, 10, 0.8) 100%);
+}
+
+.btn-orange {
+    background-color: var(--electric-orange);
+    color: white;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid var(--electric-orange);
+}
+
+.btn-orange:hover {
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+.glass-card {
+    background: var(--charcoal);
+    border: 1px solid rgba(255, 107, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+    border-color: var(--electric-orange);
+}
+
+/* Custom Marquee */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.marquee-content {
+    display: flex;
+    width: 200%;
+    animation: scroll 20s linear infinite;
+}
